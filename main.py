@@ -19,5 +19,6 @@ X_val = data[val_size:, :-1]
 Y_val = data[val_size:, -1]
 
 model = DA_RNN(X_dim=X_dim, Y_dim=Y_dim, batch_size=64,
-               learning_rate=1e-4, linear_dropout=0.3, T=20)
+               learning_rate=5e-4, linear_dropout=0.3, T=20)
 model.train(X_train, Y_train, X_val, Y_val, 200)
+# print(model.predict(X_val))
